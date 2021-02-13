@@ -16,7 +16,7 @@ class Test():
         drive.get('https://www.amazon.com/ref=nav_logo')
         search = Main(drive)
         search.search_products_go()
-        drive.implicitly_wait(5)
+        drive.implicitly_wait(30)
         x = 0
         while x < 3:
             title = drive.find_elements_by_xpath(self.pd_title)
@@ -30,7 +30,7 @@ class Test():
                     print('this have not cost')
             page = drive.find_element_by_xpath(self.page_)
             page.click()
-            time.sleep(5)
+            drive.implicitly_wait(30)
             x = x+1
 
 def main():
