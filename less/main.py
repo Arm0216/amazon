@@ -27,7 +27,7 @@ class Test():
                     if float(cost) > 10:
                         print(ct.find_element_by_tag_name('h2').text)
                 except:
-                    print('this have not cost')
+                    print("it doesn't cost 10%")
             page = drive.find_element_by_xpath(self.page_)
             page.click()
             time.sleep(7)
